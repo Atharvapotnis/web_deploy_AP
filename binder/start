@@ -1,2 +1,3 @@
 #!/bin/bash
+# Start Pluto on Binder
 exec julia --project=binder -e "using Pluto; Pluto.run(host=\"0.0.0.0\", port=8888, launch_browser=false)"
