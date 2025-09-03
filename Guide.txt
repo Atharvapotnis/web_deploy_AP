@@ -1,0 +1,5 @@
+First open Terminal
+using Pkg
+Pkg.activate(".")
+using Pluto
+Pluto.run()

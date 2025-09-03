@@ -1,0 +1,2 @@
+#!/bin/bash
+julia --project=binder -e 'using Pkg; Pkg.instantiate(); using Pluto'
