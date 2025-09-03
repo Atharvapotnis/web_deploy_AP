@@ -1,2 +1,8 @@
 #!/bin/bash
-julia --project=binder -e 'using Pkg; Pkg.instantiate(); using Pluto'
+set -eux
+
+# Precompile dependencies
+julia --project=binder -e 'using Pkg; Pkg.instantiate(); Pkg.precompile()'
+
+# Install Pluto and register it as a Jupyter server extension
+julia --project=binder -e 'using Pluto; Pluto.run()'
